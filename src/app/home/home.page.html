@@ -9,6 +9,22 @@
 <ion-content>
   <div class="ion-padding">
     The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be
+      your guide.</p>
   </div>
+
+  <br>
+
+  <ion-button color="success" expand="block">
+    <a [href]="sanitize()" style="color: white; text-decoration: none;">
+      Print use Sanitize link
+    </a>
+  </ion-button>
+
+  <br>
+
+  <ion-button (click)="openWindow()" expand="block">
+    Print use Window Open
+  </ion-button>
+
 </ion-content>
