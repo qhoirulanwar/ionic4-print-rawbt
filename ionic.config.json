@@ -1,5 +1,7 @@
 {
   "name": "ionic-print",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
