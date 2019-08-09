@@ -15,3 +15,11 @@ ionic 4 Printing receipt use RawBT
 ```sh
 <allow-intent href="rawbt:*" />
 ```
+#### add script in src/index.html
+```sh
+<script>
+  if (global === undefined) {
+    var global = window;
+  }
+</script>
+```
