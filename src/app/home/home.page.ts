@@ -27,9 +27,9 @@ export class HomePage {
     .line('aligned the left')
 
     .newline()
-    .encode();
+    .encode(); // return Uint8Array format
 
-  // Convert uint8 array to base64 encoded string
+  // Convert uint8array to base64 encoded string
   // https://stackoverflow.com/questions/12710001/how-to-convert-uint8-array-to-base64-encoded-string
   u8 = new Uint8Array(this.result);
   decoder = new TextDecoder('utf8');
@@ -38,11 +38,13 @@ export class HomePage {
   constructor(private sanitizer: DomSanitizer) { }
 
   sanitize() {
+    // Print use Sanitize link
     const urlintent: string = 'rawbt:base64,'
     return this.sanitizer.bypassSecurityTrustUrl(urlintent + this.b64encoded);
   };
 
   openWindow() {
+    // Print use Window Open
     const urlintent: string = 'rawbt:base64,'
     window.open(urlintent + this.b64encoded)
   }
